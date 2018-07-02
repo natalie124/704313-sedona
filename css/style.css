@@ -40,6 +40,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .menu-list a {
   font-weight: bold;
   line-height: 26px;
@@ -222,6 +227,7 @@ a {
 
 .services {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -240,19 +246,19 @@ a {
 .service-item.house {
   background-image: url(../img/icon-1.svg);
   background-repeat: no-repeat;
-  background-position: center 56px;
+  background-position: center 54px;
 }
 
 .service-item.food {
   background-image: url(../img/icon-3.svg);
   background-repeat: no-repeat;
-  background-position: center 58px;
+  background-position: center 55px;
 }
 
 .service-item.souvenir {
   background-image: url(../img/icon-2.svg);
   background-repeat: no-repeat;
-  background-position: center 54px;
+  background-position: center 50px;
 }
 
 .service-item h4 {
@@ -281,6 +287,7 @@ a {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .more-advantages .advantages-item {
@@ -323,6 +330,7 @@ a {
 }
 
 .search-hotels-btn {
+  font-family: inherit;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -370,6 +378,7 @@ a {
 }
 
 .modal-window {
+  font-family: inherit;
   font-weight: bold;
   line-height: 26px;
 
@@ -416,6 +425,7 @@ a {
 }
 
 .modal-window-field {
+  font-family:inherit;
   font-size: 14px;
   font-weight: bold;
   line-height: 26px;
@@ -450,26 +460,62 @@ a {
   background: #ebebeb;
 }
 
-.modal-window-field:focus {
+.date-field:focus {
   outline: 0;
+
+  height: 33px;
+
   background: #fff;
+  border: 2px solid #e5e5e5;
+  border-right: none;
+}
+.number-field:focus {
+  outline: 0;
+
+  height: 34px;
+
+  background: #fff;
+  border-top: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
 }
 
 .modal-window-field:hover + .field-button {
   background: #ebebeb;
 }
 
-.modal-window-field:focus + .field-button {
+.date-field:focus + .field-button {
   background: #fff;
+  border: 2px solid #e5e5e5;
+  border-left: none;
+}
+.number-field-adults:focus ~ .adults-button-minus {
+  background: #fff;
+  border: 2px solid #e5e5e5;
+  border-right: none;
+}
+.number-field-adults:focus ~ .adults-button-plus {
+  background: #fff;
+  border: 2px solid #e5e5e5;
+  border-left: none;
+}
+.number-field-children:focus ~ .children-button-minus {
+  background: #fff;
+  border: 2px solid #e5e5e5;
+  border-right: none;
+}
+.number-field-children:focus ~ .children-button-plus {
+  background: #fff;
+  border: 2px solid #e5e5e5;
+  border-left: none;
 }
 
-.number-field.adults:hover ~ .adults-button-plus,
-.number-field.children:hover ~ .children-button-plus {
+.number-field-adults:hover ~ .adults-button-plus,
+.number-field-children:hover ~ .children-button-plus {
   background: #ebebeb;
 }
 
-.number-field.adults:focus ~ .adults-button-plus,
-.number-field.children:focus ~ .children-button-plus {
+.number-field-adults:focus ~ .adults-button-plus,
+.number-field-children:focus ~ .children-button-plus {
   background: #fff;
 }
 
@@ -559,6 +605,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .modal-window-button {
+  font-family: inherit;
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -578,7 +625,7 @@ input[type=number]::-webkit-outer-spin-button {
   margin-left: 25px;
 }
 
-.number-field.adults {
+.number-field-adults {
   margin-left: 50px;
 }
 
@@ -598,15 +645,15 @@ input[type=number]::-webkit-outer-spin-button {
 
   display: flex;
 
-  min-height: 130px;
-  margin-top: -130px;
+  min-height: 120px;
+  margin-top: -120px;
 
   background-color: rgba(252, 251, 251, .9);
 
   align-items: center;
   justify-content: space-between;
 
-  padding: 0 72px;
+  padding: 0 101px 0 133px;
 }
 
 .visit {
@@ -614,10 +661,6 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
   line-height: 26px;
 }
-
-/*.page-footer ul {
-  padding-bottom: 8px;
-}*/
 
 .page-footer li {
   list-style: none;
@@ -652,7 +695,6 @@ input[type=number]::-webkit-outer-spin-button {
   width: 150px;
   margin: 0 auto;
   padding: 0;
-/*  padding-top: 6px;*/
 
   flex-wrap: wrap;
   justify-content: space-between;
@@ -660,6 +702,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 .footer-copyright {
   width: 197px;
+  margin-left: -30px;
 }
 
 .footer-copyright a {
@@ -673,12 +716,12 @@ input[type=number]::-webkit-outer-spin-button {
   justify-content: space-between;
 }
 
-.footer-copyright a:hover path,
-.footer-copyright a:focus path {
+.footer-copyright-link:hover path,
+.footer-copyright-link:focus path {
   fill: #81b3d2;
 }
 
-.footer-copyright a:active path {
+.footer-copyright-link:active path {
   fill: #bdbbbc;
 }
 
@@ -690,7 +733,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
   align-items: flex-start;
 
-  height: 217px;
+  min-height: 217px;
   padding: 0 72px;
 
   color: #fff;
@@ -822,6 +865,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .price-controls label {
+  font-family: inherit;
   font-size: 14px;
   line-height: 21px;
 
@@ -901,6 +945,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .btn-transparent {
+  font-family: inherit;
   font-size: 14px;
   line-height: 20px;
 
@@ -994,6 +1039,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .sort-btn-container {
+  font-family: inherit;
   font-size: 0;
 
   margin-left: auto;
@@ -1015,7 +1061,7 @@ input[type=number]::-webkit-outer-spin-button {
   display: flex;
 
   width: 1056px;
-  height: 92px;
+  min-height: 92px;
   padding: 29px 72px;
 
   border-bottom: 1px solid #e5e5e5;
@@ -1030,6 +1076,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .hotel-image {
+  max-height: 90px;
+  max-width: 135px;
   margin-right: 31px;
 }
 
@@ -1038,6 +1086,7 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: bold;
   line-height: 26px;
 
+  max-width: 364px;
   margin: -4px 0 6px;
   padding: 0;
 }
@@ -1058,6 +1107,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .hotel-content button {
+  font-family: inherit;
   font-size: 14px;
   font-weight: bold;
   line-height: 21px;
@@ -1151,6 +1201,9 @@ a.current-link,
 
 .map {
   position: relative;
+
+  width: 100%;
+  height: 593px;
 
   overflow: hidden;
 
